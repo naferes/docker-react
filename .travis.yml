@@ -9,3 +9,16 @@ before_install:
 
 script:
   - docker run -e CI=true stephengrider/docker-react npm run test
+
+#deploy:
+ # provider: elasticbeanstalk
+  #region: "wagthever .............."
+  #app: docker-react ##whathveer we called our app
+  #env: "Docker-env" ## depends on your config
+  #bucket_name: "elasticbeanstalk-theregion-someID" #created by aws by default
+  #bucket_path: "docker-react" 
+  #on:
+     #branch: master 
+  #access_key_id: $AWS_ACCESS_KEY # access key id created in aws and configured on environment variables in travis
+  #secret_access_key: $AWS_SECRET_KEY #secret access key created in aws and configured on environment variables in travis
+  
